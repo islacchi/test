@@ -1,0 +1,98 @@
+body{
+    background-color: rgb(40, 41, 43);
+    
+}
+input{
+    font-size: 20px;
+    width: 30%;
+    height: 30px;
+    padding: 5px;
+}
+button {
+    padding: 8px;
+    width: 8%;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-style: initial;
+}
+hr{
+    width: 39%;
+}
+.header{
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    color: gainsboro;
+    margin-top: 5%;
+    margin-bottom: 20px;  
+    background-color: rgb(40, 41, 43) ; 
+}
+.header1{
+    font-size: 60%;
+}
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}  
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px 16px 6px 16px;
+}
+.close:hover {
+    background-color: white ;
+    color: rgb(40, 41, 43);
+}
+.button:hover {
+    background-color: #bbb;
+  }
+ul {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 40%;
+}
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding:5px; 
+    background-color: rgb(40, 41, 43);
+    color: gainsboro;
+    font-size: 30px;
+    text-align: center;
+    transition: 0.2s;  
+    list-style-type: none;
+    font-family: 'Courier New', Courier, monospace;
+
+    -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Darker background-color on hover */
+ul li:hover {
+    background: rgb(94, 91, 91);
+}
+ul li.checked {
+  color: rgb(209, 203, 203);
+  text-decoration: line-through;
+}
+  
+  /* Add a "checked" mark when clicked on */
+li.checked::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 17px;
+    width: 7px;
+  }
+  ul li:nth-child(odd) {
+    background: rgb(76, 76, 80);
+  }
