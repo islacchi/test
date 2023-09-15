@@ -2,28 +2,19 @@
 <html>
     <head>
         <link href="design.css" rel="stylesheet" type="text/css">
-        <title>To Do app</title>
-        
+        <title>To Do app</title>      
     </head>
-
-    <body>
+ <body>
     <div id="div1" class="header">
-            <h1>To Do's <hr></h1>
-
-         <div id="=div1" class="header1">
+        <h1>To Do's <hr></h1>
+        <div id="=div1" class="header1">
             <p id="time"></p>
-         </div>   
-                       
+        </div>                 
         <input type="text" id="List" placeholder="Enter task...">
-        <button onclick="newElement()" class="button"> Save </button> 
-               
-    </div>
-           
-        <ul id="My" >
-        </ul>
-    <script>
-
-
+        <button onclick="newElement()" class="button"> Save </button>           
+    </div>    
+        <ul id="My" ></ul>
+<script>
 //Close button
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -34,7 +25,6 @@ for (i = 0; i < myNodelist.length; i++) {
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
 }
-
 //Close button process
 var close = document.getElementsByClassName("close");
 var i;
@@ -44,7 +34,6 @@ for (i = 0; i < close.length; i++) {
     div.style.display = "none";
   }
 }
-
 //check
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
@@ -52,19 +41,18 @@ list.addEventListener('click', function(ev) {
     ev.target.classList.toggle('checked');
   }
 }, false);
-
 // Add list
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("List").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
-
   if (inputValue === '') {
     alert("You must write something!");
-  } else {
+      }
+  else {
     document.getElementById("My").appendChild(li);
-  }
+      }
   document.getElementById("List").value = "";
 
   var span = document.createElement("SPAN");
@@ -80,15 +68,8 @@ function newElement() {
     }
   }
 }
-
 var d = new Date();
-document.getElementById("time").innerHTML = d;
-        
-    </script>
-
-
-   
-
-    </body>
-
+document.getElementById("time").innerHTML = d;    
+</script>
+</body>
 </html>
